@@ -11,11 +11,16 @@
 
  
  function btn_click(id) {
-    //alert(id);
+
     var complete = "." + id;
-    //alert(complete);
+
     localStorage.value = "." + id;
-    if( localStorage.selected === "None" ){
+    var y = document.querySelectorAll (
+     complete
+    );
+
+
+    if(  localStorage.selected === "None" && $( y ).css('background-color') === 'rgb(0, 0, 0)' ){
 
 	    localStorage.selected = id;
 
@@ -24,6 +29,11 @@
         );
 	    $( x ).css( "background-color","yellow" );
     }else{
+    
+    	//Connection
+    	
+    	
+    	//var newData = ${remoteFunction(controller: 'my', action: 'updateData', params: '["Holaaa"]')};
     
     	var complete = "." + localStorage.selected;
 
