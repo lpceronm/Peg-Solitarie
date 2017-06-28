@@ -30,17 +30,34 @@
 	    $( x ).css( "background-color","yellow" );
     }else{
     
-    	//Connection
+    	
+    	if( $( y ).css('background-color') === 'rgb(128, 128, 128)'){ 
+    	
+    		//Connection
+    		alert("entro a connection");
+    		
+    		
+    		//var newData = ${remoteFunction(controller: 'my', action: 'updateData', params: '["Holaaa"]')};
+    
+	    	var complete = "." + localStorage.selected;
+	
+		    var x = document.querySelectorAll (
+	        complete
+	        );
+		    $( x ).css( "background-color","gray" );
+		    localStorage.selected = "None";
+    	}
     	
     	
-    	//var newData = ${remoteFunction(controller: 'my', action: 'updateData', params: '["Holaaa"]')};
+    	
+    	
     
     	var complete = "." + localStorage.selected;
 
 	    var x = document.querySelectorAll (
         complete
         );
-	    $( x ).css( "background-color","gray" );
+	    $( x ).css( "background-color","black" );
 	    localStorage.selected = "None";
     	
     }

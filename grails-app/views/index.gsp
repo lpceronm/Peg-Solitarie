@@ -103,7 +103,7 @@
 					<div class="col-md-1"><button onclick="btn_click('b01');" type="button" class="btn btn-default btn-circle b01" style="background-color:black"></button></div>
 					<div class="col-md-1"><button onclick="btn_click('b02');" type="button" class="btn btn-default btn-circle b02" style="background-color:gray"></button></div>
 					<div class="col-md-1"><button onclick="btn_click('b03');" type="button" class="btn btn-default btn-circle b03" style="background-color:gray"></button></div>
-					<div class="col-md-1"><button onclick="btn_click('b04');" type="button" class="btn btn-default btn-circle b04" style="background-color:gray"></button></div>
+					<div class="col-md-1"><button onclick="btn_click('b04');" type="button" class="btn btn-default btn-circle b04" style="background-color:black"></button></div>
 					<div class="col-md-1"><button onclick="btn_click('b05');" type="button" class="btn btn-default btn-circle b05" style="background-color:gray"></button></div>
 					<div class="col-md-1"><button onclick="btn_click('b06');" type="button" class="btn btn-default btn-circle b06" style="background-color:gray"></button></div>
 					<div class="col-md-3"><br><br><br></div>
