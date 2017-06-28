@@ -90,7 +90,7 @@ environments {
         grails.logging.jul.usebridge = true
         grails.serverURL = "http://localhost:8090/Peg_solitarie"
     }
-    }
+    
     production {
         grails.logging.jul.usebridge = false
         grails.serverURL = "http://localhost:8090/Peg_solitarie"
