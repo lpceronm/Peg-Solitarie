@@ -29,7 +29,7 @@
     	
     		//Connection
     		alert("entro a connection");
-    		back(1,1);   
+    		back(localStorage.selected,id);   
 	    	var complete = "." + localStorage.selected;
 	
 		    var x = document.querySelectorAll (

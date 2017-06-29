@@ -554,7 +554,8 @@
 	<script>
 		function back(p1, p2) {
 			alert("listo");
-    		<g:remoteFunction controller="test" action="hola" />             
+			
+    		<g:remoteFunction controller="play" action="movement" params="'fromM='+p1+'&'+'toM='+p2"/>             
 		}
 	</script>
 </body>

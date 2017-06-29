@@ -1,14 +1,12 @@
 package peg_solitarie
 
-//import java.lang.invoke.SwitchPoint
+class PlayController {
 
-class GameController {
-
-	//public Board gameBoard;
+//public Board gameBoard;
 	
     def index() { }
 	
-	/*def init() {
+	def init() {
 		this.gameBoard = new Board();
 		gameBoard.printBoard();
 	}
@@ -23,16 +21,17 @@ class GameController {
 	
 	def undo() {
 		
-	}*/
+	}
 	
 	def movement() {
 		print("here?")
-		//String fromM = params.fromM
-		//String toM = params.toM
+		String fromM = params.fromM
+		String toM = params.toM
 		
-		//print(fromM)
+		print(fromM)
+		print(toM)
 		
-		/*char[] from1 = fromM.toCharArray();
+		char[] from1 = fromM.toCharArray();
 		char[] to1 = toM.toCharArray();
 		int result = hori_vertical(from1, to1);
 		
@@ -45,20 +44,20 @@ class GameController {
 			case 1:
 				
 				break;
-		}*/
+		}
 		
 	
 		
 	}
 	
 	
-	/*private int  hori_vertical(char[] fromM, char[] toM) {
+	private int  hori_vertical(char[] fromM, char[] toM) {
 		if(fromM[0].equals(toM[0])) {
 			return 0;
 		}else if(fromM[1].equals(toM[1])){
 			return 1;
 		}	
-	}*/
+	}
 	
 	def hola() {
 		print("si llegue aqui")
