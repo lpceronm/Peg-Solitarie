@@ -77,6 +77,7 @@
                     
                     <div class="intro-text">
                         <h1 class="name">Peg Solitaire</h1>
+                        <button class="testMe">test</button>
                         <hr class="star-light">
                         <span class="skills">Laura Cerón M. - Camilo A. Dajer P. - Richard O. Herrera P.</span>
                     </div>
@@ -550,6 +551,12 @@
     <script src="${assetPath (src: 'freelancer.min.js')}"></script>
     <script src="${assetPath (src: 'game.js')}"></script>
 	<script>localStorage.selected=None;</script>
+	<script>
+		function back(p1, p2) {
+			alert("listo");
+    		<g:remoteFunction controller="test" action="hola" />             
+		}
+	</script>
 </body>
 
 </html>
