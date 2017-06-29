@@ -77,7 +77,6 @@
                     
                     <div class="intro-text">
                         <h1 class="name">Peg Solitaire</h1>
-                        <button class="testMe">test</button>
                         <hr class="star-light">
                         <span class="skills">Laura Cerón M. - Camilo A. Dajer P. - Richard O. Herrera P.</span>
                     </div>
@@ -100,33 +99,33 @@
 				<div class="col-sm-10">	
 					<!-- First Row -->
 					<div class="col-md-2"><br></div>
-					<div class="col-md-1"><button onclick="btn_click('b00');" type="button" class="btn btn-default btn-circle b00" style="background-color:gray"></button></div>
-					<div class="col-md-1"><button onclick="btn_click('b01');" type="button" class="btn btn-default btn-circle b01" style="background-color:black"></button></div>
+					<div class="col-md-1"><button onclick="btn_click('b00');" type="button" class="btn btn-default btn-circle b00" style="background-color:blue"></button></div>
+					<div class="col-md-1"><button onclick="btn_click('b01');" type="button" class="btn btn-default btn-circle b01" style="background-color:blue"></button></div>
 					<div class="col-md-1"><button onclick="btn_click('b02');" type="button" class="btn btn-default btn-circle b02" style="background-color:gray"></button></div>
 					<div class="col-md-1"><button onclick="btn_click('b03');" type="button" class="btn btn-default btn-circle b03" style="background-color:gray"></button></div>
-					<div class="col-md-1"><button onclick="btn_click('b04');" type="button" class="btn btn-default btn-circle b04" style="background-color:black"></button></div>
-					<div class="col-md-1"><button onclick="btn_click('b05');" type="button" class="btn btn-default btn-circle b05" style="background-color:gray"></button></div>
-					<div class="col-md-1"><button onclick="btn_click('b06');" type="button" class="btn btn-default btn-circle b06" style="background-color:gray"></button></div>
+					<div class="col-md-1"><button onclick="btn_click('b04');" type="button" class="btn btn-default btn-circle b04" style="background-color:gray"></button></div>
+					<div class="col-md-1"><button onclick="btn_click('b05');" type="button" class="btn btn-default btn-circle b05" style="background-color:blue"></button></div>
+					<div class="col-md-1"><button onclick="btn_click('b06');" type="button" class="btn btn-default btn-circle b06" style="background-color:blue"></button></div>
 					<div class="col-md-3"><br><br><br></div>
 					
 					<!-- Second Row -->
 					<div class="col-sm-2"></div>
-					<div class="col-sm-1"><button onclick="btn_click('b10');" type="button" class="btn btn-default btn-circle b10" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b11');" type="button" class="btn btn-default btn-circle b11" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b10');" type="button" class="btn btn-default btn-circle b10" style="background-color:blue"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b11');" type="button" class="btn btn-default btn-circle b11" style="background-color:blue"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b12');" type="button" class="btn btn-default btn-circle b12" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b13');" type="button" class="btn btn-default btn-circle b13" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b13');" type="button" class="btn btn-default btn-circle b13" style="background-color:black"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b14');" type="button" class="btn btn-default btn-circle b14" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b15');" type="button" class="btn btn-default btn-circle b15" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b16');" type="button" class="btn btn-default btn-circle b16" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b15');" type="button" class="btn btn-default btn-circle b15" style="background-color:blue"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b16');" type="button" class="btn btn-default btn-circle b16" style="background-color:blue"></button></div>
 					<div class="col-md-3"><br><br><br></div>
 									
 					<!-- Third Row -->
 					<div class="col-sm-2"></div>
 					<div class="col-sm-1"><button onclick="btn_click('b20');" type="button" class="btn btn-default btn-circle b20" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b21');" type="button" class="btn btn-default btn-circle b21" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b22');" type="button" class="btn btn-default btn-circle b22" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b23');" type="button" class="btn btn-default btn-circle b23" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b24');" type="button" class="btn btn-default btn-circle b24" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b22');" type="button" class="btn btn-default btn-circle b22" style="background-color:black"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b23');" type="button" class="btn btn-default btn-circle b23" style="background-color:black"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b24');" type="button" class="btn btn-default btn-circle b24" style="background-color:black"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b25');" type="button" class="btn btn-default btn-circle b25" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b26');" type="button" class="btn btn-default btn-circle b26" style="background-color:gray"></button></div>
 					<div class="col-md-3"><br><br><br></div>
@@ -137,7 +136,7 @@
 					<div class="col-sm-1"><button onclick="btn_click('b30');" type="button" class="btn btn-default btn-circle b30" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b31');" type="button" class="btn btn-default btn-circle b31" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b32');" type="button" class="btn btn-default btn-circle b32" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b33');" type="button" class="btn btn-default btn-circle b33" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b33');" type="button" class="btn btn-default btn-circle b33" style="background-color:black"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b34');" type="button" class="btn btn-default btn-circle b34" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b35');" type="button" class="btn btn-default btn-circle b35" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b36');" type="button" class="btn btn-default btn-circle b36" style="background-color:gray"></button></div>
@@ -149,7 +148,7 @@
 					<div class="col-sm-1"><button onclick="btn_click('b40');" type="button" class="btn btn-default btn-circle b40" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b41');" type="button" class="btn btn-default btn-circle b41" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b42');" type="button" class="btn btn-default btn-circle b42" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b43');" type="button" class="btn btn-default btn-circle b43" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b43');" type="button" class="btn btn-default btn-circle b43" style="background-color:black"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b44');" type="button" class="btn btn-default btn-circle b44" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b45');" type="button" class="btn btn-default btn-circle b45" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b46');" type="button" class="btn btn-default btn-circle b46" style="background-color:gray"></button></div>
@@ -158,24 +157,24 @@
 					
 					<!-- Sixth Row -->
 					<div class="col-sm-2"></div>
-					<div class="col-sm-1"><button onclick="btn_click('b50');" type="button" class="btn btn-default btn-circle b50" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b51');" type="button" class="btn btn-default btn-circle b51" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b50');" type="button" class="btn btn-default btn-circle b50" style="background-color:blue"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b51');" type="button" class="btn btn-default btn-circle b51" style="background-color:blue"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b52');" type="button" class="btn btn-default btn-circle b52" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b53');" type="button" class="btn btn-default btn-circle b53" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b54');" type="button" class="btn btn-default btn-circle b54" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b55');" type="button" class="btn btn-default btn-circle b55" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b56');" type="button" class="btn btn-default btn-circle b56" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b55');" type="button" class="btn btn-default btn-circle b55" style="background-color:blue"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b56');" type="button" class="btn btn-default btn-circle b56" style="background-color:blue"></button></div>
 					<div class="col-md-3"><br><br><br></div>
 					
 					<!-- Seventh Row -->
 					<div class="col-sm-2"></div>
-					<div class="col-sm-1"><button onclick="btn_click('b60');" type="button" class="btn btn-default btn-circle b60" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b61');" type="button" class="btn btn-default btn-circle b61" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b60');" type="button" class="btn btn-default btn-circle b60" style="background-color:blue"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b61');" type="button" class="btn btn-default btn-circle b61" style="background-color:blue"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b62');" type="button" class="btn btn-default btn-circle b62" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b63');" type="button" class="btn btn-default btn-circle b63" style="background-color:gray"></button></div>
 					<div class="col-sm-1"><button onclick="btn_click('b64');" type="button" class="btn btn-default btn-circle b64" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b65');" type="button" class="btn btn-default btn-circle b65" style="background-color:gray"></button></div>
-					<div class="col-sm-1"><button onclick="btn_click('b66');" type="button" class="btn btn-default btn-circle b66" style="background-color:gray"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b65');" type="button" class="btn btn-default btn-circle b65" style="background-color:blue"></button></div>
+					<div class="col-sm-1"><button onclick="btn_click('b66');" type="button" class="btn btn-default btn-circle b66" style="background-color:blue"></button></div>
 					<div class="col-md-3"><br><br><br></div>
 
 				</div>
@@ -184,14 +183,9 @@
 				
 					<div class="row" align="center">
 
-		            	<div class="col-lg-8 col-lg-offset-2">
-		                    <a href="https://github.com/trum7/Peg-Solitarie" class="btn btn-lg btn-success">
-		                        <i class="fa fa-download"></i> Start
-		                    </a>
-		                </div>
 		                <div class="col-lg-12 col-lg-offset-2"><br></div>
 		            	<div class="col-lg-8 col-lg-offset-2">
-		                    <a href="https://github.com/trum7/Peg-Solitarie" class="btn btn-lg btn-warning">
+		                    <a onClick="window.location.reload();" class="btn btn-lg btn-warning">
 		                        <i class="fa fa-download"></i> Restart
 		                    </a>
 		                </div>
@@ -200,6 +194,13 @@
 		                    <a href="https://github.com/trum7/Peg-Solitarie" class="btn btn-lg btn-primary">
 		                        <i class="fa fa-download"></i> Undo
 		                    </a>
+		                </div>
+		               	<div class="col-lg-12 col-lg-offset-2"><br><br></div>
+		          		<div class="col-lg-8 col-lg-offset-2" >
+		                    <h4>Movements</h4>
+		                </div>
+		          		<div class="col-lg-8 col-lg-offset-2" align="center" id="content">
+		                    <h2 id="score">0</h2>
 		                </div>
 		            </div>
 				
@@ -550,11 +551,14 @@
     <!-- Theme JavaScript -->
     <script src="${assetPath (src: 'freelancer.min.js')}"></script>
     <script src="${assetPath (src: 'game.js')}"></script>
+    <script src="${assetPath (src: 'template.js')}"></script>
 	<script>localStorage.selected=None;</script>
 	<script>
 		function back(p1, p2) {
-			alert("listo");
-    		<g:remoteFunction controller="test" action="hola" />             
+			//alert("listo");
+			
+    		<g:remoteFunction controller="play" action="movement" params="'fromM='+p1+'&'+'toM='+p2"/>             			 
+		
 		}
 	</script>
 </body>
