@@ -17,6 +17,22 @@ public class Hole {
 		this.peg = peg;
 		this.state = state;
 	}
+
+	public Peg getPeg() {
+		return peg;
+	}
+
+	public void setPeg(Peg peg) {
+		this.peg = peg;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
 	
 	
 }
