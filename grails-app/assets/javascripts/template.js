@@ -122,20 +122,26 @@ function evaluate(from, to) {
 		    
 		    
    }
+   
     
 }
 
 function score() {
 
-	//alert("aja?");
-	//var x = document.getElementById("score");
-	//x.querySelector(".example").innerHTML = "Hello World!";
-	//document.getElementById("score").value = "new text";
 	var num = parseInt(localStorage.score) + 1;
 	localStorage.score = num;
     document.getElementById("content").innerHTML = "<h2>" + num + "</h2>";
+    localStorage.pegs = parseInt(localStorage.pegs - 1);
+	winner();
 }
 
+function winner() {
+
+	if( localStorage.pegs === "1" ){
+		alert("Ganaste!");
+	}
+	
+}
 
 
 
