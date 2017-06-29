@@ -1,4 +1,4 @@
- $('#btn').click(function() {
+$('#btn').click(function() {
       var id = $(this).attr('id');
       alert(id);
  });
@@ -35,6 +35,7 @@ function btn_click(id) {
 	    var x = document.querySelectorAll ( complete );
 	    $( x ).css( "background-color","black" );
 	    localStorage.selected = "None";	
+
     }
 }
 
@@ -43,10 +44,6 @@ function init() {
 
     localStorage.selected = "None";
     localStorage.score = 0;
+    localStorage.pegs = 6;
 
 }
-
-
-
-
-
