@@ -25,7 +25,7 @@ class PlayController {
 	
 	def movement() {
 		print("here?")
-		String fromM = params.fromM
+		/*String fromM = params.fromM
 		String toM = params.toM
 		
 		print(fromM)
@@ -45,8 +45,9 @@ class PlayController {
 				
 				break;
 		}
-		
-	
+		*/
+
+		render 'hola'
 		
 	}
 	
