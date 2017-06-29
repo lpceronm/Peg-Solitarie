@@ -77,7 +77,6 @@
                     
                     <div class="intro-text">
                         <h1 class="name">Peg Solitaire</h1>
-                        <button class="testMe">test</button>
                         <hr class="star-light">
                         <span class="skills">Laura Cerón M. - Camilo A. Dajer P. - Richard O. Herrera P.</span>
                     </div>
@@ -184,14 +183,9 @@
 				
 					<div class="row" align="center">
 
-		            	<div class="col-lg-8 col-lg-offset-2">
-		                    <a href="https://github.com/trum7/Peg-Solitarie" class="btn btn-lg btn-success">
-		                        <i class="fa fa-download"></i> Start
-		                    </a>
-		                </div>
 		                <div class="col-lg-12 col-lg-offset-2"><br></div>
 		            	<div class="col-lg-8 col-lg-offset-2">
-		                    <a href="https://github.com/trum7/Peg-Solitarie" class="btn btn-lg btn-warning">
+		                    <a onClick="window.location.reload();" class="btn btn-lg btn-warning">
 		                        <i class="fa fa-download"></i> Restart
 		                    </a>
 		                </div>
@@ -200,6 +194,13 @@
 		                    <a href="https://github.com/trum7/Peg-Solitarie" class="btn btn-lg btn-primary">
 		                        <i class="fa fa-download"></i> Undo
 		                    </a>
+		                </div>
+		               	<div class="col-lg-12 col-lg-offset-2"><br><br></div>
+		          		<div class="col-lg-8 col-lg-offset-2" >
+		                    <h4>Movements</h4>
+		                </div>
+		          		<div class="col-lg-8 col-lg-offset-2" align="center" id="content">
+		                    <h2 id="score">0</h2>
 		                </div>
 		            </div>
 				

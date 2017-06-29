@@ -42,6 +42,7 @@ function btn_click(id) {
 function init() {
 
     localStorage.selected = "None";
+    localStorage.score = 0;
 
 }
 

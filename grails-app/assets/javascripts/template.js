@@ -36,6 +36,7 @@ function evaluate(from, to) {
              		$( y ).css( "background-color","gray" );
              		var y = document.querySelectorAll ( "." + to );
              		$( y ).css( "background-color","black" );
+             		score();
              	
              	}	
              
@@ -53,6 +54,7 @@ function evaluate(from, to) {
 	             		$( y ).css( "background-color","gray" );
 	             		var y = document.querySelectorAll ( "." + to );
 	             		$( y ).css( "background-color","black" );
+	             		score();
 	             	
 	             	}	
              
@@ -84,7 +86,8 @@ function evaluate(from, to) {
              		var y = document.querySelectorAll ( "." + from );
              		$( y ).css( "background-color","gray" );
              		var y = document.querySelectorAll ( "." + to );
-             		$( y ).css( "background-color","black" );        	
+             		$( y ).css( "background-color","black" );
+             		score();        	
              	}	
              
              }else{
@@ -101,7 +104,7 @@ function evaluate(from, to) {
 	             		$( y ).css( "background-color","gray" );
 	             		var y = document.querySelectorAll ( "." + to );
 	             		$( y ).css( "background-color","black" );
-	             	
+	             		score();
 	             	}	
              
              }
@@ -122,11 +125,15 @@ function evaluate(from, to) {
     
 }
 
-function checker(from, to) {
+function score() {
 
-	
-
-    
+	//alert("aja?");
+	//var x = document.getElementById("score");
+	//x.querySelector(".example").innerHTML = "Hello World!";
+	//document.getElementById("score").value = "new text";
+	var num = parseInt(localStorage.score) + 1;
+	localStorage.score = num;
+    document.getElementById("content").innerHTML = "<h2>" + num + "</h2>";
 }
 
 
