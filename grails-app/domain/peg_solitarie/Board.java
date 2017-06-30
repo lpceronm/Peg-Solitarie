@@ -47,6 +47,7 @@ public class Board {
 		return lc;
 	}
 	
+	
 	private void basicFigure() {
 		gameGrid[0][0].setState(0);
 		gameGrid[0][1].setState(0);
