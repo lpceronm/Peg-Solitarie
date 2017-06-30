@@ -4,8 +4,8 @@ public class Move {
 
 	private Board gameBoard;
 
-	public Move() {
-		this.gameBoard = new Board();
+	public Move(String initial) {
+		this.gameBoard = new Board(initial);
 	}
 	
 	public void movePeg(String fromM, String toM) {
@@ -22,8 +22,7 @@ public class Move {
 			int newX = position(x1,x2);
 			updateBoard(y1, x1, x2, newX, 1);
 		}
-		gameBoard.printBoard();
-		System.out.println("Win: " + gameBoard.conditionWin());
+		if (gameBoard.conditionWin()) System.out.println("Ganaste");
 	}
 	
 	public int  calcHorizontalVertical(int x1, int y1, int x2, int y2) {
@@ -86,5 +85,9 @@ public class Move {
 	
 	public int getOwnerHole(int x, int y){
 		return gameBoard.getOwnerHole(x, y);
+	}
+	
+	public void resetBoard(){
+		gameBoard.resetBoard();
 	}
 }

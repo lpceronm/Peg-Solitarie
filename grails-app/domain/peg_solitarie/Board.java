@@ -4,30 +4,16 @@ import java.util.ArrayList;
 
 public class Board {
 	private Hole[][] gameGrid;
+	private ArrayList<String> configureBoard;
 	
-	public Board() {
+	public Board(String configuration) {
 		gameGrid = new Hole[7][7]; 
-		for(int i=0; i<7; i++) {
-			for(int j=0; j<7; j++) {
-				gameGrid[i][j] = Hole.getDefault();
-			}
-		}
 		basicFigure();
-		setBoardConfiguration(latinCross());
-	}
-
-	public Board(ArrayList<String> configuration) {
-		gameGrid = new Hole[7][7]; 
-		for(int i=0; i<7; i++) {
-			for(int j=0; j<7; j++) {
-				gameGrid[i][j] = Hole.getDefault();
-			}
-		}
-		basicFigure();
-		setBoardConfiguration(configuration);
+		setBoardConfiguration(createConfiguration(configuration));
 	}
 	
 	private void setBoardConfiguration(ArrayList<String> config) {
+		setConfigureBoard(config);
 		for(int i= 1; i< config.size(); i=i+2) {
 			int x = Integer.parseInt( (String) config.get(i-1));
 			int y = Integer.parseInt((String) config.get(i));
@@ -35,17 +21,22 @@ public class Board {
 		}
 	}
 	
-	private ArrayList<String> latinCross() {
+	private ArrayList<String> createConfiguration(String initial) {
 		ArrayList<String> lc = new ArrayList<String>();
-		String[] con = "1,3,2,2,2,3,2,4,3,3,4,3".split(",");
+		String[] con = initial.split(",");
 		for(int i= 0; i< con.length; i++) {
 			String temp = con[i];
 			lc.add(temp);
 		}
 		return lc;
 	}
-	
+
 	private void basicFigure() {
+		for(int i=0; i<7; i++) {
+			for(int j=0; j<7; j++) {
+				gameGrid[i][j] = Hole.getDefault();
+			}
+		}
 		gameGrid[0][0].setState(0);
 		gameGrid[0][1].setState(0);
 		gameGrid[0][5].setState(0);
@@ -96,5 +87,18 @@ public class Board {
 
 	public int getOwnerHole(int x, int y){
 		return gameGrid[x][y].getState();
+	}
+
+	public ArrayList<String> getConfigureBoard(){
+		return this.configureBoard;
+	}
+
+	public void setConfigureBoard(ArrayList<String> board){
+		this.configureBoard = board;
+	}
+	
+	public void resetBoard(){
+		basicFigure();
+		setBoardConfiguration(getConfigureBoard());
 	}
 }

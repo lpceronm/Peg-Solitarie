@@ -8,14 +8,14 @@ public class BoardTest {
 
 	@Test
 	public void basicConfiguration() {
-		Board board = new Board();
+		Board board = new Board("1,3,2,2,2,3,2,4,3,3,4,3");
 		int score = board.evaluateBoard();
 		assertEquals(6, score);
 	}
 
 	@Test
 	public void otherConfiguration() {
-		Board board = new Board();
+		Board board = new Board("1,3,2,2,2,3,2,4,3,3,4,3");
 		board.setOwnerHole(2, 2, 1);
 		board.setOwnerHole(3, 1, 1);
 		board.setOwnerHole(3, 2, 1);
@@ -26,7 +26,7 @@ public class BoardTest {
 
 	@Test
 	public void evaluateWinning() {
-		Board board = new Board();
+		Board board = new Board("1,3,2,2,2,3,2,4,3,3,4,3");
 		board.setOwnerHole(2, 2, 1);
 		board.setOwnerHole(3, 1, 1);
 		board.setOwnerHole(3, 2, 1);
@@ -37,7 +37,7 @@ public class BoardTest {
 
 	@Test
 	public void checkSetOwnerHole() {
-		Board board = new Board();
+		Board board = new Board("1,3,2,2,2,3,2,4,3,3,4,3");
 		board.setOwnerHole(2, 2, 1);
 		int score = board.evaluateBoard();
 		assertEquals(5, score);
@@ -45,7 +45,7 @@ public class BoardTest {
 
 	@Test
 	public void checkSetOwnerHole2() {
-		Board board = new Board();
+		Board board = new Board("1,3,2,2,2,3,2,4,3,3,4,3");
 		board.printBoard();
 		board.setOwnerHole(3, 2, 1);
 		board.setOwnerHole(5, 2, 2);
