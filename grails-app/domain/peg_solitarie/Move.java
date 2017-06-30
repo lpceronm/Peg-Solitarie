@@ -23,6 +23,7 @@ public class Move {
 			updateBoard(y1, x1, x2, newX, 1);
 		}
 		gameBoard.printBoard();
+		System.out.println("Win: " + gameBoard.conditionWin());
 	}
 	
 	public int  calcHorizontalVertical(int x1, int y1, int x2, int y2) {

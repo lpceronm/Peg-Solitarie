@@ -36,7 +36,7 @@ public class Board {
 	}
 	
 	private ArrayList<String> latinCross() {
-		ArrayList<String> lc = new ArrayList<>();
+		ArrayList<String> lc = new ArrayList<String>();
 		String[] con = "1,3,2,2,2,3,2,4,3,3,4,3".split(",");
 		for(int i= 0; i< con.length; i++) {
 			String temp = con[i];

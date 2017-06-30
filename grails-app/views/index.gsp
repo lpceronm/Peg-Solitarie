@@ -527,7 +527,7 @@ A peg can only move by jumping over an adjacent peg (that's a peg that's right n
 		function back(p1, p2) {
 			//alert("listo");
 			
-    		<g:remoteFunction controller="play" action="movement" params="'fromM='+p1+'&'+'toM='+p2"/>             			 
+    		<g:remoteFunction controller="move" action="movement" params="'fromM='+p1+'&'+'toM='+p2"/>             			 
 		
 		}
 	</script>

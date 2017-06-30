@@ -83,8 +83,8 @@ public class MoveTest {
 		Move move = new Move();
 		move.movePeg("b33", "b53");
 		assertEquals(1, move.getOwnerHole(3, 3));
-		assertEquals(1, move.getOwnerHole(3, 4));
-		assertEquals(2, move.getOwnerHole(3, 5));
+		assertEquals(1, move.getOwnerHole(4, 3));
+		assertEquals(2, move.getOwnerHole(5, 3));
 	}
 
 	@Test
@@ -94,5 +94,16 @@ public class MoveTest {
 		assertEquals(1, move.getOwnerHole(2, 3));
 		assertEquals(1, move.getOwnerHole(1, 3));
 		assertEquals(2, move.getOwnerHole(0, 3));
+	}
+	
+	@Test
+	public void checkWinningGame(){
+		Move move = new Move();
+		move.movePeg("b23", "b25");
+		move.movePeg("b43", "b23");
+		move.movePeg("b22", "b24");
+		move.movePeg("b25", "b23");
+		move.movePeg("b13", "b33");
+		assertTrue(move.conditionWin());
 	}
 }
