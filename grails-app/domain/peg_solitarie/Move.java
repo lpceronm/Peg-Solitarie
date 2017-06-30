@@ -1,43 +1,34 @@
 package peg_solitarie;
 
-
 public class Move {
 
-	private int newX, newY = -1;
 	private Board gameBoard;
 
 	public Move() {
 		this.gameBoard = new Board();
 	}
-
+	
 	public void movePeg(String fromM, String toM) {
 		char[] from1 = fromM.substring(1).toCharArray();
 		char[] to1 = toM.substring(1).toCharArray();
-
-		int x1 = Character.getNumericValue(from1[1]);
-		int x2 = Character.getNumericValue(to1[1]);
-		int y1 = Character.getNumericValue(from1[0]);
-		int y2 = Character.getNumericValue(to1[0]);
-		int result = horiVertical(x1,x2,y1,y2);
-		switch (result) {
-			case 0:
-				newY = position(y1,y2);
-				updateBoard(x1, y1, y2, newY, result);
-				break;
-			case 1:
-				newX = position(x1,x2);
-				updateBoard(y1, x1, x2, newX, result);
-				break;
-			default:
-				break;
+		int x1 = Character.getNumericValue(from1[0]);
+		int x2 = Character.getNumericValue(to1[0]);
+		int y1 = Character.getNumericValue(from1[1]);
+		int y2 = Character.getNumericValue(to1[1]);
+		if (calcHorizontalVertical(x1,y1,x2,y2) == 0){
+			int newY = position(y1,y2);
+			updateBoard(x1, y1, y2, newY, 0);
+		} else {
+			int newX = position(x1,x2);
+			updateBoard(y1, x1, x2, newX, 1);
 		}
-
+		gameBoard.printBoard();
 	}
-
-	public int  horiVertical(int x1, int x2, int y1, int y2) {
+	
+	public int  calcHorizontalVertical(int x1, int y1, int x2, int y2) {
 		if(x1 == x2) {
 			return 0;
-		}else if(y1 == y2){
+		} else if(y1 == y2){
 			return 1;
 		} else {
 			return 2;
@@ -63,7 +54,7 @@ public class Move {
 	public boolean canMove(int x, int y) {
 		return (gameBoard.getOwnerHole(x, y) == 2) ? true: false;
 	}
-
+	
 	public void updateBoard(int a, int b, int c, int d, int result){
 		if (result == 0){
 			if (canMove(a, d)){
@@ -83,15 +74,15 @@ public class Move {
 	public Board getBoard(){
 		return this.gameBoard;
 	}
-
+	
 	public boolean conditionWin(){
 		return gameBoard.conditionWin();
 	}
-
+	
 	public void showBoard(){
 		gameBoard.printBoard();
 	}
-
+	
 	public int getOwnerHole(int x, int y){
 		return gameBoard.getOwnerHole(x, y);
 	}
