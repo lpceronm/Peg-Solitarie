@@ -116,5 +116,12 @@ public class MoveTest {
 		move.showBoard();
 		assertEquals(1, move.getOwnerHole(2, 5));
 	}
-*/	
+*/	@Test
+	public void checkWinningGame(){
+		Move move = new Move("1,3,2,2,2,3,2,4,3,3,4,3");
+		move.movePeg("b23", "b25");
+		move.movePeg("b43", "b23");
+		move.movePeg("b23", "b03");
+		assertEquals(move.getBoard().getNumberMoves(),2);
+	}
 }
