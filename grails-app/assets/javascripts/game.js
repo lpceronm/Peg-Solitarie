@@ -45,6 +45,8 @@ function init() {
     localStorage.selected = "None";
     localStorage.score = 0;
     localStorage.pegs = 6;
+    localStorage.record = ""; 
+    localStorage.report = ""; 
     
 }
 
@@ -61,7 +63,29 @@ $('#change').click(function() {
       $( '.b44' ).css( "background-color","black" );
       $( '.b45' ).css( "background-color","black" );
       $( '.b46' ).css( "background-color","black" );
+      localStorage.pegs = 16;
       
       
       
  });
+ 
+
+function history() {
+
+    var div = document.getElementById('valid');
+
+	div.innerHTML = div.innerHTML + "<h4>" + localStorage.fr + "->" +  localStorage.last + "</h4>";
+
+
+}
+
+function undoHistory() {
+
+    var div2 = document.getElementById('valid');
+
+
+	div2.innerHTML = div2.innerHTML + "<h4 style='color:red'>" + localStorage.fr + "<-" +  localStorage.last + "</h4>";
+
+	
+	
+}
