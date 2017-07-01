@@ -31,10 +31,18 @@ function evaluate(from, to) {
                 var complete = ".b" + sumstring2 + sumstring1;
              	var y = document.querySelectorAll ( complete );
              	if( $( y ).css('background-color') === 'rgb(0, 0, 0)' ){
+             		
+             		localStorage.record = "." + to +  "," + localStorage.record  ;
+             		localStorage.record = "." + from + "," + localStorage.record;
+             		localStorage.record = complete + "," + localStorage.record ;
+             		
+             		//localStorage.record = localStorage.record + complete + "," ;
              		$( y ).css( "background-color","gray" );
              		var y = document.querySelectorAll ( "." + from );
+             		//localStorage.record = localStorage.record + "." + from + "," ;
              		$( y ).css( "background-color","gray" );
              		var y = document.querySelectorAll ( "." + to );
+             		//localStorage.record = localStorage.record + "." + to + "," ;
              		$( y ).css( "background-color","black" );
              		score();
              		localStorage.last = to;
@@ -50,10 +58,18 @@ function evaluate(from, to) {
 	                var complete = ".b" + sumstring2 + sumstring1;
 	             	var y = document.querySelectorAll ( complete );
 	             	if( $( y ).css('background-color') === 'rgb(0, 0, 0)' ){
+	             		
+	             		localStorage.record = "." + to +  "," + localStorage.record  ;
+	             		localStorage.record = "." + from + "," + localStorage.record;
+	             		localStorage.record = complete + "," + localStorage.record ;
+	             		
+	             		//localStorage.record = localStorage.record + complete + "," ;
 	             		$( y ).css( "background-color","gray" );
 	             		var y = document.querySelectorAll ( "." + from );
+	             		//localStorage.record = localStorage.record + "." + from + "," ;
 	             		$( y ).css( "background-color","gray" );
 	             		var y = document.querySelectorAll ( "." + to );
+	             		//localStorage.record = localStorage.record + "." + to + "," ;
 	             		$( y ).css( "background-color","black" );
 	             		score();
 	             		localStorage.last = to;
@@ -84,13 +100,22 @@ function evaluate(from, to) {
 
              	var y = document.querySelectorAll ( complete );
              	if( $( y ).css('background-color') === 'rgb(0, 0, 0)' ){
+             		
+             		localStorage.record = "." + to +  "," + localStorage.record  ;
+             		localStorage.record = "." + from + "," + localStorage.record;
+             		localStorage.record = complete + "," + localStorage.record ;
+             		
+             		//localStorage.record = localStorage.record + complete + "," ;
              		$( y ).css( "background-color","gray" );
              		var y = document.querySelectorAll ( "." + from );
+             		//localStorage.record = localStorage.record + "." + from + "," ;
              		$( y ).css( "background-color","gray" );
              		var y = document.querySelectorAll ( "." + to );
+             		//localStorage.record = localStorage.record + "." + to + "," ;
              		$( y ).css( "background-color","black" );
-             		score();  
-             		localStorage.last = to;      	
+             		score();
+             		localStorage.last = to;
+             			
              	}	
              
              }else{
@@ -102,14 +127,23 @@ function evaluate(from, to) {
 	                var complete = ".b" + sumstring1 + sumstring2;
 	             	var y = document.querySelectorAll ( complete );
 	             	if( $( y ).css('background-color') === 'rgb(0, 0, 0)' ){
+	             		
+	             		localStorage.record = "." + to +  "," + localStorage.record  ;
+	             		localStorage.record = "." + from + "," + localStorage.record;
+	             		localStorage.record = complete + "," + localStorage.record ;
+	             		
+	             		//localStorage.record = localStorage.record + complete + "," ;
 	             		$( y ).css( "background-color","gray" );
 	             		var y = document.querySelectorAll ( "." + from );
+	             		//localStorage.record = localStorage.record + "." + from + "," ;
 	             		$( y ).css( "background-color","gray" );
 	             		var y = document.querySelectorAll ( "." + to );
+	             		//localStorage.record = localStorage.record + "." + to + "," ;
 	             		$( y ).css( "background-color","black" );
 	             		score();
+	             		localStorage.last = to;
+             		
 	             	}	
-	             	localStorage.last = to;
              
              }
        }else{
@@ -136,14 +170,30 @@ function score() {
 
 	}else{
 
-		var num = parseInt(localStorage.score) + 1;
+	var num = parseInt(localStorage.score) + 1;
 	localStorage.score = num;
     document.getElementById("content").innerHTML = "<h2>" + num + "</h2>";
 
     }
     localStorage.pegs = parseInt(localStorage.pegs - 1);
+    history();
 	winner();
 }
+
+function unscore() {
+	
+	if(localStorage.last === localStorage.fr){
+
+	}else{
+
+	var num = parseInt(localStorage.score) - 1;
+	localStorage.score = num;
+    document.getElementById("content").innerHTML = "<h2>" + num + "</h2>";
+
+    }
+
+}
+
 
 function winner() {
 
@@ -152,6 +202,36 @@ function winner() {
 	}
 	
 }
+
+
+$('#undo').click(function() {
+
+
+	var move = localStorage.record.split(",");
+	if( move.length > 1 ){
+		middle = move[0];
+		from = move[1];
+		to = move[2];
+		//alert(middle);
+		//alert(from);
+		//alert(to);
+		var y = document.querySelectorAll ( middle );
+	    $( y ).css( "background-color","black" );
+	    var y = document.querySelectorAll ( from );
+	    $( y ).css( "background-color","black" );
+	    var y = document.querySelectorAll ( to );
+	    $( y ).css( "background-color","gray" );
+	    
+	    localStorage.pegs = localStorage.pegs + 1
+	    unscore();
+	    
+	    //New array
+	    localStorage.record = localStorage.record.slice(15, localStorage.record.length);
+		undoHistory()
+		
+	}
+	
+});
 
 
 
