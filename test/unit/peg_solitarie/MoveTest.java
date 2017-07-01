@@ -106,7 +106,7 @@ public class MoveTest {
 		move.movePeg("b13", "b33");
 		assertTrue(move.conditionWin());
 	}
-*/	
+
 	@Test
 	public void checkResetBoard(){
 		Move move = new Move("1,3,2,2,2,3,2,4,3,3,4,3");
@@ -116,4 +116,5 @@ public class MoveTest {
 		move.showBoard();
 		assertEquals(1, move.getOwnerHole(2, 5));
 	}
+*/	
 }

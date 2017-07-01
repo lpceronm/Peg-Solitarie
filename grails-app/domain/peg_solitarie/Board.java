@@ -6,14 +6,19 @@ import java.util.List;
 public class Board {
 	private Hole[][] gameGrid;
 	private ArrayList<String> configureBoard;
+	private int numberMoves;
 	
+	
+
 	public Board(String configuration) {
 		gameGrid = new Hole[7][7]; 
+		
 		basicFigure();
 		setBoardConfiguration((ArrayList) createConfiguration(configuration));
 	}
 	
 	private void setBoardConfiguration(List config) {
+		numberMoves = 0;
 		setConfigureBoard((ArrayList) config);
 		for(int i= 1; i< config.size(); i=i+2) {
 			int x = Integer.parseInt( (String) config.get(i-1));
@@ -96,6 +101,14 @@ public class Board {
 
 	public void setConfigureBoard(List board){
 		this.configureBoard = (ArrayList<String>) board;
+	}
+	
+	public int getNumberMoves() {
+		return numberMoves;
+	}
+
+	public void updateNumberMoves(int nMoves) {
+		this.numberMoves = getNumberMoves() + nMoves;
 	}
 	
 	public void resetBoard(){
