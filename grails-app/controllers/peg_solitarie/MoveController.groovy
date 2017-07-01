@@ -1,8 +1,6 @@
 package peg_solitarie
 
 class MoveController {
-
-    def index() { }
 	
 	def movement(){
 		String fromM = params.fromM

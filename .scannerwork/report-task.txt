@@ -2,5 +2,5 @@ projectKey=Peg
 serverUrl=http://localhost:9000
 serverVersion=6.4.0.25310
 dashboardUrl=http://localhost:9000/dashboard/index/Peg
-ceTaskId=AVz26kDvVi8kUrykF9X0
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AVz26kDvVi8kUrykF9X0
+ceTaskId=AVz8X7meBRZ9tYxfmIcq
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVz8X7meBRZ9tYxfmIcq
