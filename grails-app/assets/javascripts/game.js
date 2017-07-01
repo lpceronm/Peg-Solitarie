@@ -45,5 +45,23 @@ function init() {
     localStorage.selected = "None";
     localStorage.score = 0;
     localStorage.pegs = 6;
-
+    
 }
+
+$('#change').click(function() {
+      
+      $( '.b31' ).css( "background-color","black" );
+      $( '.b32' ).css( "background-color","black" );
+      $( '.b34' ).css( "background-color","black" );
+      $( '.b35' ).css( "background-color","black" );
+      $( '.b40' ).css( "background-color","black" );
+      $( '.b41' ).css( "background-color","black" );
+      $( '.b42' ).css( "background-color","black" );
+      $( '.b43' ).css( "background-color","black" );
+      $( '.b44' ).css( "background-color","black" );
+      $( '.b45' ).css( "background-color","black" );
+      $( '.b46' ).css( "background-color","black" );
+      
+      
+      
+ });

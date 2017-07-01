@@ -2,7 +2,7 @@ function evaluate(from, to) {
 
 
 
-
+	localStorage.fr = from;
 	var fromM = from.substring(1, 3);
 	var toM = to.substring(1, 3);
 
@@ -37,6 +37,7 @@ function evaluate(from, to) {
              		var y = document.querySelectorAll ( "." + to );
              		$( y ).css( "background-color","black" );
              		score();
+             		localStorage.last = to;
              	
              	}	
              
@@ -55,6 +56,7 @@ function evaluate(from, to) {
 	             		var y = document.querySelectorAll ( "." + to );
 	             		$( y ).css( "background-color","black" );
 	             		score();
+	             		localStorage.last = to;
 	             	
 	             	}	
              
@@ -87,7 +89,8 @@ function evaluate(from, to) {
              		$( y ).css( "background-color","gray" );
              		var y = document.querySelectorAll ( "." + to );
              		$( y ).css( "background-color","black" );
-             		score();        	
+             		score();  
+             		localStorage.last = to;      	
              	}	
              
              }else{
@@ -106,6 +109,7 @@ function evaluate(from, to) {
 	             		$( y ).css( "background-color","black" );
 	             		score();
 	             	}	
+	             	localStorage.last = to;
              
              }
        }else{
@@ -127,10 +131,16 @@ function evaluate(from, to) {
 }
 
 function score() {
+	
+	if(localStorage.last === localStorage.fr){
 
-	var num = parseInt(localStorage.score) + 1;
+	}else{
+
+		var num = parseInt(localStorage.score) + 1;
 	localStorage.score = num;
     document.getElementById("content").innerHTML = "<h2>" + num + "</h2>";
+
+    }
     localStorage.pegs = parseInt(localStorage.pegs - 1);
 	winner();
 }
