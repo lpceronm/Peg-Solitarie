@@ -3,9 +3,11 @@ package peg_solitarie;
 public class Move {
 
 	private Board gameBoard;
+	private String previousMove;
 
 	public Move(String initial) {
 		this.gameBoard = new Board(initial);
+		this.previousMove = "";
 	}
 	
 	public void movePeg(String fromM, String toM) {
@@ -15,13 +17,15 @@ public class Move {
 		int x2 = Character.getNumericValue(to1[0]);
 		int y1 = Character.getNumericValue(from1[1]);
 		int y2 = Character.getNumericValue(to1[1]);
+		
 		if (calcHorizontalVertical(x1,y1,x2,y2) == 0){
 			int newY = position(y1,y2);
-			updateBoard(x1, y1, y2, newY, 0);
+			updateNumberMoves(updateBoard(x1, y1, y2, newY, 0), fromM, toM);
 		} else {
 			int newX = position(x1,x2);
-			updateBoard(y1, x1, x2, newX, 1);
+			updateNumberMoves(updateBoard(y1, x1, x2, newX, 1),fromM, toM);
 		}
+		
 		if (gameBoard.conditionWin()) System.out.println("Ganaste");
 	}
 	
@@ -55,20 +59,24 @@ public class Move {
 		return (gameBoard.getOwnerHole(x, y) == 2) ? true: false;
 	}
 	
-	public void updateBoard(int a, int b, int c, int d, int result){
+	public boolean updateBoard(int a, int b, int c, int d, int result){
+		boolean change = false;
 		if (result == 0){
 			if (canMove(a, d)){
 				gameBoard.setOwnerHole(b, a, 1);
 				gameBoard.setOwnerHole(c, a, 2);
 				gameBoard.setOwnerHole(d, a, 1);
+				change = true;
 			}
 		} else {
 			if (canMove(d, a)){
 				gameBoard.setOwnerHole(a, b, 1);
 				gameBoard.setOwnerHole(a, c, 2);
 				gameBoard.setOwnerHole(a, d, 1);
+				change = true;
 			}
 		}
+		return change;
 	}
 
 	public Board getBoard(){
@@ -89,5 +97,14 @@ public class Move {
 	
 	public void resetBoard(){
 		gameBoard.resetBoard();
+	}
+	
+	public void updateNumberMoves(boolean can,String fromM, String toM) {
+		if (can) {
+			if (!previousMove.equals(fromM)) {
+				gameBoard.updateNumberMoves(1);
+			}
+			previousMove = toM;	
+		}	
 	}
 }

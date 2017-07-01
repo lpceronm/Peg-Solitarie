@@ -1,19 +1,25 @@
 package peg_solitarie;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Board {
 	private Hole[][] gameGrid;
 	private ArrayList<String> configureBoard;
+	private int numberMoves;
 	
+	
+
 	public Board(String configuration) {
 		gameGrid = new Hole[7][7]; 
+		
 		basicFigure();
-		setBoardConfiguration(createConfiguration(configuration));
+		setBoardConfiguration((ArrayList) createConfiguration(configuration));
 	}
 	
-	private void setBoardConfiguration(ArrayList<String> config) {
-		setConfigureBoard(config);
+	private void setBoardConfiguration(List config) {
+		numberMoves = 0;
+		setConfigureBoard((ArrayList) config);
 		for(int i= 1; i< config.size(); i=i+2) {
 			int x = Integer.parseInt( (String) config.get(i-1));
 			int y = Integer.parseInt((String) config.get(i));
@@ -21,8 +27,8 @@ public class Board {
 		}
 	}
 	
-	private ArrayList<String> createConfiguration(String initial) {
-		ArrayList<String> lc = new ArrayList<String>();
+	private List createConfiguration(String initial) {
+		ArrayList lc = new ArrayList();
 		String[] con = initial.split(",");
 		for(int i= 0; i< con.length; i++) {
 			String temp = con[i];
@@ -89,12 +95,20 @@ public class Board {
 		return gameGrid[x][y].getState();
 	}
 
-	public ArrayList<String> getConfigureBoard(){
+	public List getConfigureBoard(){
 		return this.configureBoard;
 	}
 
-	public void setConfigureBoard(ArrayList<String> board){
-		this.configureBoard = board;
+	public void setConfigureBoard(List board){
+		this.configureBoard = (ArrayList<String>) board;
+	}
+	
+	public int getNumberMoves() {
+		return numberMoves;
+	}
+
+	public void updateNumberMoves(int nMoves) {
+		this.numberMoves = getNumberMoves() + nMoves;
 	}
 	
 	public void resetBoard(){
