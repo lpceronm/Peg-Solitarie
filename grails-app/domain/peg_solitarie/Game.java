@@ -2,7 +2,7 @@ package peg_solitarie;
 
 public class Game {
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		String initial = "1,3,2,2,2,3,2,4,3,3,4,3";
 		Move move = new Move(initial);
 	
@@ -17,6 +17,6 @@ public class Game {
 		move.movePeg("b25", "b23");
 		move.movePeg("b13", "b33");
 		move.resetBoard();
-	}
+	}*/
 
 }

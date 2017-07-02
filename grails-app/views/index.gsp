@@ -183,13 +183,19 @@
 				
 					<div class="row" align="center">
 		            	<div class="col-lg-8 col-lg-offset-2">
-		                    <a id="change" class="btn btn-lg btn-warning">
+		                    <a id="change" class="btn btn-lg btn-success">
 		                        Pyramid
 		                    </a>
 		                </div>
 		                <div class="col-lg-12 col-lg-offset-2"><br></div>
+		                <div class="col-lg-8 col-lg-offset-2">
+		                    <a id="undo" class="btn btn-lg btn-warning">
+		                        Undo
+		                    </a>
+		                </div>
+		                <div class="col-lg-12 col-lg-offset-2"><br></div>
 		            	<div class="col-lg-8 col-lg-offset-2">
-		                    <a onClick="window.location.reload();" class="btn btn-lg btn-warning">
+		                    <a onClick="window.location.reload();" class="btn btn-lg btn-danger">
 		                        <i class="fa fa-download"></i> Restart
 		                    </a>
 		                </div>
@@ -210,6 +216,10 @@
 				
 				</div>
 				
+				<div id="valid" class="col-sm-12">
+					<h2>Movements</h2>
+					
+				</div>
 				
             </div>
         </div>
