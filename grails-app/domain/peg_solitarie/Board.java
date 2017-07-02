@@ -88,7 +88,7 @@ public class Board {
 	}
 	
 	public void setOwnerHole(int x, int y, int state){
-		gameGrid[y][x].setState(state);
+		gameGrid[x][y].setState(state);
 	}
 
 	public int getOwnerHole(int x, int y){

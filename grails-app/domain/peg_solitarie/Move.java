@@ -1,13 +1,18 @@
 package peg_solitarie;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Move {
 
 	private Board gameBoard;
 	private String previousMove;
+	private List<MovePoint> undoStack;
 
 	public Move(String initial) {
 		this.gameBoard = new Board(initial);
 		this.previousMove = "";
+	    this.undoStack = new ArrayList<>();
 	}
 	
 	public void movePeg(String fromM, String toM) {
@@ -21,9 +26,11 @@ public class Move {
 		if (calcHorizontalVertical(x1,y1,x2,y2) == 0){
 			int newY = position(y1,y2);
 			updateNumberMoves(updateBoard(x1, y1, y2, newY, 0), fromM, toM);
+			undoStack.add(new MovePoint(x1, y1, x1, y2, x1, newY));
 		} else {
 			int newX = position(x1,x2);
 			updateNumberMoves(updateBoard(y1, x1, x2, newX, 1),fromM, toM);
+			undoStack.add(new MovePoint(x1, y1, x2, y1, newX, y1));
 		}
 		
 		if (gameBoard.conditionWin()) System.out.println("Ganaste");
@@ -63,16 +70,16 @@ public class Move {
 		boolean change = false;
 		if (result == 0){
 			if (canMove(a, d)){
-				gameBoard.setOwnerHole(b, a, 1);
-				gameBoard.setOwnerHole(c, a, 2);
-				gameBoard.setOwnerHole(d, a, 1);
+				gameBoard.setOwnerHole(a, b, 1);
+				gameBoard.setOwnerHole(a, c, 2);
+				gameBoard.setOwnerHole(a, d, 1);
 				change = true;
 			}
 		} else {
 			if (canMove(d, a)){
-				gameBoard.setOwnerHole(a, b, 1);
-				gameBoard.setOwnerHole(a, c, 2);
-				gameBoard.setOwnerHole(a, d, 1);
+				gameBoard.setOwnerHole(b, a, 1);
+				gameBoard.setOwnerHole(c, a, 2);
+				gameBoard.setOwnerHole(d, a, 1);
 				change = true;
 			}
 		}
@@ -107,4 +114,25 @@ public class Move {
 			previousMove = toM;	
 		}	
 	}
+
+	public List<Integer> removeUndoStack(){
+	    MovePoint movePoint = undoStack.remove(undoStack.size() - 1);
+	    return movePoint.getPoints();
+	}
+	
+	public void printUndoStack(){
+	    MovePoint movePoint;
+	    for(int i = 0; i <= undoStack.size()-1 ;i++){
+	      	movePoint = undoStack.get(i);
+			movePoint.printPoint();
+	    }
+	}
+
+	public void unmovePeg(){
+		List<Integer> unmove = removeUndoStack();
+		gameBoard.setOwnerHole(unmove.get(0), unmove.get(1), 2);
+		gameBoard.setOwnerHole(unmove.get(2), unmove.get(3), 1);
+		gameBoard.setOwnerHole(unmove.get(4), unmove.get(5), 2);
+	}
+
 }
